@@ -1,4 +1,4 @@
-package lesson6.Dz;
+package com.lesson6.Dz;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,11 +16,11 @@ public class Item {
     @SequenceGenerator(name = "PR_SEQ", sequenceName = "PRODUCT_SEQ", allocationSize = 2)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PR_SEQ")
     @Column(name = "ITEM_ID")
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

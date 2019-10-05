@@ -1,4 +1,4 @@
-package lesson6.Dz;
+package com.lesson6.Dz;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +20,13 @@ public class ItemController {
     public ItemController(ItemDAO itemDAO) {
         this.itemDAO = itemDAO;
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/test", produces = "text/plan")
+    public @ResponseBody
+    String test() {
+        return "ok";
+    }
+
 
     @RequestMapping(method = RequestMethod.POST, value = "/save-item", produces = "text/plain")
     public @ResponseBody

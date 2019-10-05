@@ -1,4 +1,4 @@
-package lesson6.Dz;
+package com.lesson6.Dz;
 
 import org.springframework.stereotype.Repository;
 
